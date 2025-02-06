@@ -26,7 +26,7 @@ layout: home
 <section id="contact">
   <h2>Contact</h2>
   <div class="card">
-    <p class="intro-text">Get in touch for opportunities or just to say hi.</p>
-    <a href="mailto:yuanfengluna@email.com" class="contact-link">yuanfengluna@email.com</a>
+    <p class="intro-text">Get in touch for opportunities or just to say hi :)</p>
+    <a href="mailto:yuanfengluna@gmail.com" class="contact-link">yuanfengluna@gmail.com</a>
   </div>
 </section>
