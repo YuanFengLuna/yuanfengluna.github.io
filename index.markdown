@@ -11,7 +11,7 @@ layout: home
   </p>
 </section>
 
-<section>
+<section id="about">
   <h2>About</h2>
   <div class="card">
     <p class="intro-text">
