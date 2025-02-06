@@ -1,12 +1,32 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
-title: Home
 ---
 
-# Hello, I'm Yuan
+# Yuan is a software engineer
+# living in ~~Beijing, China~~ Irvine, California
 
-I'm a software engineer based in Irvine, California.
-This is my personal corner of the internet.
+<section class="intro">
+  <p class="intro-text">
+    She is clothed with strength and dignity, and she laughs without fear of the future. <br>Proverbs 31:25
+  </p>
+</section>
+
+<section>
+  <h2>About</h2>
+  <div class="card">
+    <p class="intro-text">
+        A faithful daughter of God, a loving wife, a cat mom, an enthusiast of whole foods diet and glucose revolution, an amateur painter/doodler, a data-driven product software engineer with 8+ years of industry experience - from FAANG companies handling billions of user data to seed-round startups building everything from the ground up. Whatever I do, I love what I put my hands on.
+    </p>
+    <p class="intro-text">
+      After all, just a human being, that is so insignificant in this world, yet so unique in His eyes.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p class="intro-text">Get in touch for opportunities or just to say hi.</p>
+    <a href="mailto:yuanfengluna@email.com" class="contact-link">yuanfengluna@email.com</a>
+  </div>
+</section>
