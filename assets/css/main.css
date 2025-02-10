@@ -85,8 +85,8 @@ h1:last-of-type {
 
 del,
 s {
-    text-decoration-color: rgba(0, 0, 0, 0.25);
-    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(0, 0, 0, 0.5);
+    text-decoration-thickness: 2px;
 }
 
 /* Space between the two lines */
@@ -95,11 +95,19 @@ h1+h1 {
     /* Remove default top margin for stacked h1s */
 }
 
+/* Section headings */
 h2 {
     font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
+    font-weight: 500;
+    /* Made bolder from 400 */
+    margin-bottom: 2rem;
     letter-spacing: -0.01em;
+    color: rgba(0, 0, 0, 0.9);
+    /* Darker color instead of opacity */
+    text-transform: uppercase;
+    /* Optional: adds a subtle sophistication */
+    letter-spacing: 0.03em;
+    /* Slight letter spacing for uppercase */
 }
 
 section {
@@ -107,26 +115,57 @@ section {
 }
 
 .intro-text {
-    font-size: 1rem;
+    font-size: 1.125rem;
     color: var(--text-secondary);
     line-height: 1.6;
     letter-spacing: -0.01em;
-    max-width: 50rem;
+}
+
+/* Add more space between paragraphs in About section */
+.intro-text+.intro-text {
+    margin-top: 1.5rem;
 }
 
 .card {
     background: white;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2.5rem;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .contact-link {
+    display: inline-block;
     font-size: 1.125rem;
     color: inherit;
     text-decoration: none;
-    transition: opacity 0.2s;
-    letter-spacing: -0.01em;
-    word-break: break-word;
+    transition: all 0.2s ease;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.contact-link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.contact-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .contact-link:hover {
@@ -169,8 +208,11 @@ section {
     }
 
     .card {
-        padding: 1.5rem;
-        /* Smaller card padding */
+        padding: 2rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
     }
 }
 
