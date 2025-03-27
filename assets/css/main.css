@@ -1,9 +1,18 @@
+/* Variables */
 :root {
+    /* Base colors */
     --bg-color: #f6f3f0;
     --text-primary: #000000;
     --text-secondary: #666666;
+
+    /* Coffee theme colors */
+    --coffee-dark: #4a3728;
+    --coffee-medium: #8a7160;
+    --coffee-light: #c4b2a0;
+    --coffee-cream: #f6eee0;
 }
 
+/* Base styles */
 body {
     margin: 0;
     padding: 0;
@@ -14,6 +23,59 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+main {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 8rem 1.5rem 4rem;
+}
+
+/* Typography */
+h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4rem;
+}
+
+h1:last-of-type {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+h1+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+    color: rgba(0, 0, 0, 0.9);
+    text-transform: uppercase;
+}
+
+.intro-text {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+}
+
+.intro-text+.intro-text {
+    margin-top: 1.5rem;
+}
+
+del,
+s {
+    text-decoration-color: rgba(0, 0, 0, 0.5);
+    text-decoration-thickness: 2px;
+}
+
+/* Navigation */
 .nav-container {
     position: fixed;
     width: 100%;
@@ -24,7 +86,6 @@ body {
     transition: box-shadow 0.3s ease;
 }
 
-/* Add shadow when scrolling */
 .nav-container.scrolled {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
@@ -61,69 +122,9 @@ nav {
     opacity: 1;
 }
 
-main {
-    max-width: 64rem;
-    margin: 0 auto;
-    padding: 8rem 1.5rem 4rem;
-}
-
-h1 {
-    font-size: 2rem;
-    font-weight: 300;
-    line-height: 1.4;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.4rem;
-}
-
-/* Style specifically for the location line */
-h1:last-of-type {
-    font-size: 1.8rem;
-    margin-top: 0.5rem;
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-}
-
-del,
-s {
-    text-decoration-color: rgba(0, 0, 0, 0.5);
-    text-decoration-thickness: 2px;
-}
-
-/* Space between the two lines */
-h1+h1 {
-    margin-top: 0;
-    /* Remove default top margin for stacked h1s */
-}
-
-/* Section headings */
-h2 {
-    font-size: 0.9375rem;
-    font-weight: 500;
-    /* Made bolder from 400 */
-    margin-bottom: 2rem;
-    letter-spacing: -0.01em;
-    color: rgba(0, 0, 0, 0.9);
-    /* Darker color instead of opacity */
-    text-transform: uppercase;
-    /* Optional: adds a subtle sophistication */
-    letter-spacing: 0.03em;
-    /* Slight letter spacing for uppercase */
-}
-
+/* Layout components */
 section {
     margin-bottom: 6rem;
-}
-
-.intro-text {
-    font-size: 1.125rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    letter-spacing: -0.01em;
-}
-
-/* Add more space between paragraphs in About section */
-.intro-text+.intro-text {
-    margin-top: 1.5rem;
 }
 
 .card {
@@ -140,6 +141,7 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
+/* Contact section */
 .contact-link {
     display: inline-block;
     font-size: 1.125rem;
@@ -172,22 +174,247 @@ section {
     opacity: 0.6;
 }
 
-@media (max-width: 768px) {
+/* Quiz Container and Entrance */
+.quiz-card {
+    border: 1px solid rgba(74, 55, 40, 0.08);
+    box-shadow: 0 4px 12px rgba(74, 55, 40, 0.05);
+}
 
-    /* Navigation adjustments */
-    nav {
-        padding: 1rem;
+.quiz-card:hover {
+    box-shadow: 0 6px 16px rgba(74, 55, 40, 0.08);
+}
+
+#quiz-entrance {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#start-quiz-btn {
+    margin-top: 1rem;
+    background-color: var(--coffee-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+#start-quiz-btn:before {
+    content: "☕";
+    font-size: 1rem;
+}
+
+#start-quiz-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Quiz Questions and Options */
+.quiz-prompt {
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.quiz-options {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.quiz-option {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--coffee-cream);
+    border: 1px solid rgba(74, 55, 40, 0.1);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--coffee-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.quiz-option:hover {
+    background-color: var(--coffee-light);
+    border-color: var(--coffee-medium);
+    transform: translateY(-2px);
+}
+
+.quiz-option.disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.quiz-option.disabled:hover {
+    transform: none;
+}
+
+.quiz-option.correct-answer {
+    background-color: rgba(92, 141, 118, 0.2);
+    border-color: #5c8d76;
+    color: #5c8d76;
+}
+
+.quiz-option.incorrect-answer {
+    background-color: rgba(190, 106, 91, 0.2);
+    border-color: #be6a5b;
+    color: #be6a5b;
+}
+
+/* Quiz Summary and Results */
+#quiz-summary {
+    text-align: center;
+}
+
+.quiz-reset {
+    margin: 1rem auto 0;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--coffee-cream);
+    border: 1px solid rgba(74, 55, 40, 0.1);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--coffee-dark);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quiz-reset:hover {
+    background-color: var(--coffee-light);
+}
+
+.quiz-reset:before {
+    content: "☕";
+    font-size: 1rem;
+}
+
+/* Coffee Reward and Animation */
+.coffee-win {
+    position: relative;
+    display: inline-block;
+}
+
+.coffee-win:after {
+    content: "☕";
+    position: absolute;
+    top: -30px;
+    left: 45%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    animation: steam 2s ease-in-out infinite;
+    opacity: 0;
+    z-index: 2;
+}
+
+.coffee-reward {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--coffee-cream);
+    border-radius: 0.5rem;
+    text-align: center;
+    display: none;
+}
+
+.coffee-reward p {
+    margin-bottom: 1rem;
+}
+
+.coffee-reward-button {
+    background-color: var(--coffee-medium);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.coffee-reward-button:hover {
+    background-color: var(--coffee-dark);
+}
+
+/* QR Code */
+.qr-container {
+    margin: 20px 0;
+}
+
+#coffee-qr {
+    max-width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.small-text {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
     }
 
-    .nav-links {
-        gap: 1rem;
-        /* Reduce gap between nav items */
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes steam {
+    0% {
+        opacity: 0;
+        transform: translateY(0px) scale(1);
+    }
+
+    25% {
+        opacity: 0.5;
+        transform: translateY(-5px) scale(1.05);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translateY(-10px) scale(1.1);
+    }
+
+    75% {
+        opacity: 0.5;
+        transform: translateY(-15px) scale(1.05);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px) scale(1);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    /* Layout adjustments */
+    main {
+        padding: 6rem 1rem 2rem;
+    }
+
+    section {
+        margin-bottom: 4rem;
+    }
+
+    .card {
+        padding: 2rem;
     }
 
     /* Typography adjustments */
     h1 {
         font-size: 1.8rem;
-        /* Smaller title on mobile */
         line-height: 1.3;
     }
 
@@ -196,31 +423,29 @@ section {
         line-height: 1.3;
     }
 
-    /* Layout adjustments */
-    main {
-        padding: 6rem 1rem 2rem;
-        /* Reduced padding on mobile */
-    }
-
-    section {
-        margin-bottom: 4rem;
-        /* Reduced section spacing */
-    }
-
-    .card {
-        padding: 2rem;
-    }
-
     .intro-text {
         font-size: 1rem;
     }
+
+    /* Navigation adjustments */
+    nav {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
 }
 
-/* Very small screens */
+@media (max-width: 640px) {
+    .quiz-options {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 480px) {
     .nav-links {
         gap: 0.75rem;
-        /* Even smaller gap for tiny screens */
     }
 
     h1 {

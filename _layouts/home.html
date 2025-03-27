@@ -25,7 +25,9 @@
     <main>
         {{ content }}
     </main>
+
     <script>
+        // Navigation scroll effect
         window.addEventListener('scroll', function () {
             const nav = document.querySelector('.nav-container');
             if (window.scrollY > 10) {
@@ -34,6 +36,177 @@
                 nav.classList.remove('scrolled');
             }
         });
+
+        // Quiz data centralized in one place
+        const quizQuestions = [
+            {
+                prompt: "How do I like to take my coffee on a workday?",
+                options: ["Latte", "Americano"],
+                correctIndex: 1
+            },
+            {
+                prompt: "Am I a morning person or night person?",
+                options: ["Morning", "Night"],
+                correctIndex: 0
+            },
+            {
+                prompt: "Which one is more like my comfort food?",
+                options: ["🍣", "🥟"],
+                correctIndex: 1
+            },
+            {
+                prompt: "How do I get fit?",
+                options: ["Strength Training", "Cardio & HIIT"],
+                correctIndex: 0
+            },
+            {
+                prompt: "How tall am I?",
+                options: ["5'9", "5'4"],
+                correctIndex: 0
+            },
+            {
+                prompt: "What name do I call my cat?",
+                options: ["Cat", "Sesame"],
+                correctIndex: 0
+            },
+            {
+                prompt: "What is my MBTI?",
+                options: ["ENTP", "INTJ"],
+                correctIndex: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        // Generate the questions HTML when starting the quiz
+        function startQuiz() {
+            // Hide entrance, show quiz
+            document.getElementById('quiz-entrance').style.display = 'none';
+            document.getElementById('quiz-container').style.display = 'block';
+
+            // Set total questions in summary
+            document.getElementById('total-questions').textContent = quizQuestions.length;
+
+            // Generate all question elements
+            const questionContainer = document.getElementById('question-container');
+            questionContainer.innerHTML = ''; // Clear container
+
+            quizQuestions.forEach((question, index) => {
+                // Create question element
+                const questionElement = document.createElement('div');
+                questionElement.className = 'quiz-question';
+                questionElement.id = `question-${index + 1}`;
+                questionElement.style.display = index === 0 ? 'block' : 'none';
+
+                // Create prompt
+                const promptElement = document.createElement('p');
+                promptElement.className = 'quiz-prompt';
+                promptElement.textContent = question.prompt;
+                questionElement.appendChild(promptElement);
+
+                // Create options container
+                const optionsContainer = document.createElement('div');
+                optionsContainer.className = 'quiz-options';
+
+                // Create option buttons
+                question.options.forEach((option, optionIndex) => {
+                    const button = document.createElement('button');
+                    button.className = 'quiz-option';
+                    button.textContent = option;
+                    button.onclick = function (event) {
+                        checkAnswer(index + 1, optionIndex === question.correctIndex, event.currentTarget);
+                    };
+                    optionsContainer.appendChild(button);
+                });
+
+                questionElement.appendChild(optionsContainer);
+                questionContainer.appendChild(questionElement);
+            });
+
+            // Optional: Smooth scroll to first question
+            document.getElementById('question-container').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function checkAnswer(questionNum, isCorrect, clickedButton) {
+            // Get all options in this question
+            const options = document.querySelectorAll(`#question-${questionNum} .quiz-option`);
+
+            // Disable all buttons and add color indicators
+            options.forEach((option, index) => {
+                option.disabled = true;
+                option.classList.add('disabled');
+
+                // Color the clicked button
+                if (option === clickedButton) {
+                    if (isCorrect) {
+                        option.classList.add('correct-answer');
+                    } else {
+                        option.classList.add('incorrect-answer');
+                    }
+                }
+            });
+
+            // Update score if correct
+            if (isCorrect) {
+                score++;
+            }
+
+            // Move to next question or show results
+            setTimeout(() => {
+                if (questionNum < quizQuestions.length) {
+                    document.getElementById(`question-${questionNum}`).style.display = 'none';
+                    document.getElementById(`question-${questionNum + 1}`).style.display = 'block';
+                    currentQuestion++;
+                } else {
+                    document.getElementById(`question-${questionNum}`).style.display = 'none';
+                    document.getElementById('quiz-summary').style.display = 'block';
+                    document.getElementById('score').textContent = score;
+
+                    const totalQuestions = quizQuestions.length;
+                    const perfectScore = score === totalQuestions;
+                    const message = document.getElementById('score-message');
+
+                    if (perfectScore) {
+                        message.textContent = "Perfecto! Friendo Espresso!";
+                        message.classList.add('coffee-win');
+                        document.getElementById('coffee-reward').style.display = 'block';
+                        document.getElementById('try-again-btn').style.display = 'none';
+                        generateQR();
+                    } else if (score >= totalQuestions * 0.7) {
+                        message.textContent = "Not far :)))";
+                        document.getElementById('try-again-btn').style.display = 'block';
+                    } else {
+                        message.textContent = "Hello stranger :)";
+                        document.getElementById('try-again-btn').style.display = 'block';
+                    }
+                }
+            }, 1000);
+        }
+
+        function resetQuiz() {
+            // Reset variables
+            currentQuestion = 0;
+            score = 0;
+
+            // Hide summary and quiz, show entrance
+            document.getElementById('quiz-summary').style.display = 'none';
+            document.getElementById('quiz-container').style.display = 'none';
+            document.getElementById('quiz-entrance').style.display = 'block';
+
+            // Clear the question container for next time
+            document.getElementById('question-container').innerHTML = '';
+        }
+
+        // Generate QR code for coffee reward
+        function generateQR() {
+            const encodedPhone = "KzE5MTczMjcwODg5";
+            const phoneNumber = atob(encodedPhone);
+            const message = encodeURIComponent("Hi Yuan! I just aced your quiz and would like to claim my free coffee! ☕");
+            const smsLink = `sms:${phoneNumber}?body=${message}`;
+            const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(smsLink)}`;
+            document.getElementById('coffee-qr').src = qrApiUrl;
+        }
     </script>
 </body>
 
