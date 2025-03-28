@@ -15,7 +15,7 @@ layout: home
   <!-- Portrait with absolute positioning -->
   <div class="portrait-container">
     <div class="portrait-wrapper">
-      <img src="assets/images/portrait.jpg" alt="Yuan's portrait" class="portrait">
+      <img src="{{ site.baseurl }}/assets/images/portrait.JPG" alt="Yuan's portrait" class="portrait">
       <!-- Separate elements for decorators -->
       <div class="portrait-decorator"></div>
       <div class="portrait-line"></div>
