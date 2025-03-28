@@ -25,6 +25,8 @@ body {
     -webkit-font-smoothing: antialiased;
     background-color: var(--mocha);
     color: var(--text-on-dark);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 main {
@@ -274,29 +276,7 @@ nav {
     text-align: center;
 }
 
-/* Quiz buttons */
-#start-quiz-btn {
-    background-color: var(--mocha);
-    color: var(--text-on-dark);
-    border: none;
-    padding: 0.875rem 1.75rem;
-    border-radius: 2rem;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-}
-
-#start-quiz-btn:hover {
-    background-color: var(--mocha-light);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(90, 68, 55, 0.2);
-}
-
+/* Quiz options and buttons */
 .quiz-options {
     display: flex;
     gap: 1rem;
@@ -333,24 +313,40 @@ nav {
     color: #be6a5b;
 }
 
+#start-quiz-btn,
+.quiz-reset,
+#try-again-btn {
+    background-color: var(--mocha);
+    color: var(--text-on-dark);
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#start-quiz-btn {
+    padding: 0.875rem 1.75rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
 .quiz-reset,
 #try-again-btn {
     display: inline-block;
-    background-color: var(--mocha);
-    color: white;
-    font-size: 1rem;
     padding: 0.75rem 2rem;
-    border-radius: 2rem;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
     margin: 2rem auto 0;
 }
 
+#start-quiz-btn:hover,
 .quiz-reset:hover,
 #try-again-btn:hover {
     background-color: var(--mocha-light);
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(90, 68, 55, 0.2);
 }
 
 /* Coffee reward */
@@ -409,26 +405,60 @@ nav {
 /* ----------------------------------------
    Responsive Styles
 ---------------------------------------- */
-@media (max-width: 1200px) {
+/* Large desktop screens */
+@media (min-width: 1201px) {
+    .portrait-container {
+        bottom: -220px;
+    }
+
     .portrait-wrapper {
-        right: -25%;
+        right: -30%;
     }
 }
 
-@media (max-width: 992px) {
+/* Smaller desktops */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .portrait-wrapper {
+        right: -20%;
+    }
+
+    .about-section {
+        padding-top: 11rem;
+    }
+}
+
+/* Medium screens (tablets and small laptops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .portrait-container {
+        bottom: -120px;
+        z-index: 30;
+    }
+
     .portrait-wrapper {
         right: -15%;
-        width: 280px;
-        height: 350px;
+        width: 240px;
+        height: 300px;
     }
 
     .portrait {
-        width: 280px;
-        height: 350px;
+        width: 240px;
+        height: 300px;
+    }
+
+    .about-section {
+        padding-top: 11rem;
+    }
+
+    .about-section h2 {
+        position: relative;
+        z-index: 40;
     }
 }
 
+/* Mobile screens */
 @media (max-width: 768px) {
+
+    /* Typography adjustments */
     h1 {
         font-size: 2.5rem;
     }
@@ -441,35 +471,60 @@ nav {
         font-size: 1.125rem;
     }
 
-    .hero-section,
-    .quiz-section,
-    .contact-section {
-        padding: 4rem 1.5rem;
-    }
-
+    /* Section adjustments */
     .hero-section {
-        padding-bottom: 12rem;
+        padding-bottom: 4rem;
+        margin-bottom: 0;
     }
 
     .about-section {
-        margin-top: -6rem;
-        padding-top: 8rem;
-        padding-bottom: 4rem;
+        margin-top: 0;
+        padding-top: 4rem;
+    }
+
+    /* Portrait styling */
+    .portrait-container {
+        position: static;
+        margin: 3rem auto 0;
+        width: 200px;
+        z-index: 10;
     }
 
     .portrait-wrapper {
-        right: -5%;
-        width: 240px;
-        height: 300px;
+        position: static;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        right: auto;
     }
 
     .portrait {
-        width: 240px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
-}
 
-@media (max-width: 640px) {
+    /* Hide decorative elements */
+    .portrait-decorator,
+    .portrait-line {
+        display: none;
+    }
+
+    /* About heading */
+    .about-section h2 {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .about-section h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Quiz adjustments */
     .quiz-options {
         flex-direction: column;
     }
@@ -477,25 +532,5 @@ nav {
     .quiz-option {
         width: 100%;
         margin-bottom: 0.75rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .portrait-wrapper {
-        right: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    h1:last-of-type {
-        font-size: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
     }
 }
