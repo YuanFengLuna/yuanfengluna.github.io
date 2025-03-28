@@ -13,7 +13,7 @@
 <body>
     <div class="nav-container">
         <nav>
-            <div class="nav-logo">YL</div>
+            <div class="nav-logo">Yuan Luna</div>
             <div class="nav-links">
                 <a href="/blog" class="nav-link">Blog</a>
                 <a href="#about" class="nav-link">About</a>
@@ -175,9 +175,11 @@
                         generateQR();
                     } else if (score >= totalQuestions * 0.7) {
                         message.textContent = "Not far :)))";
+                        document.getElementById('coffee-reward').style.display = 'none';
                         document.getElementById('try-again-btn').style.display = 'block';
                     } else {
                         message.textContent = "Hello stranger :)";
+                        document.getElementById('coffee-reward').style.display = 'none';
                         document.getElementById('try-again-btn').style.display = 'block';
                     }
                 }
@@ -200,12 +202,22 @@
 
         // Generate QR code for coffee reward
         function generateQR() {
-            const encodedPhone = "KzE5MTczMjcwODg5";
+            // Base64 encoded phone number for privacy
+            const encodedPhone = "KzE5MTczMjcwODg5"; // Your encoded phone number
             const phoneNumber = atob(encodedPhone);
+
             const message = encodeURIComponent("Hi Yuan! I just aced your quiz and would like to claim my free coffee! ☕");
             const smsLink = `sms:${phoneNumber}?body=${message}`;
+
+            // Make sure to use a valid and accessible QR code API
             const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(smsLink)}`;
-            document.getElementById('coffee-qr').src = qrApiUrl;
+
+            // Set the image source directly and ensure it's visible
+            const qrImage = document.getElementById('coffee-qr');
+            qrImage.src = qrApiUrl;
+            qrImage.style.display = 'block';
+            qrImage.style.maxWidth = '150px';
+            qrImage.style.margin = '0 auto';
         }
     </script>
 </body>
