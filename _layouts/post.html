@@ -1,0 +1,110 @@
+---
+layout: default
+---
+
+<article class="section" style="padding-top: calc(var(--space-3xl) + 4rem);">
+    <div class="section-narrow">
+        <header style="margin-bottom: var(--space-xl);">
+            <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-md);">
+                > cat {{ page.date | date: "%Y-%m-%d" }}-{{ page.title | slugify }}.md
+            </div>
+            <h1 style="font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: var(--space-sm);">{{ page.title }}</h1>
+            <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted);">
+                {{ page.date | date: "%B %d, %Y" }}
+                {% if page.categories.size > 0 %}
+                &middot;
+                {% for cat in page.categories %}
+                <span>{{ cat }}</span>{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+                {% endif %}
+            </div>
+        </header>
+
+        <div class="post-content">
+            {{ content }}
+        </div>
+
+        <footer style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid rgba(232,180,184,0.06);">
+            <a href="{{ '/blog' | relative_url }}" class="btn">cd ~/blog</a>
+        </footer>
+    </div>
+</article>
+
+<style>
+    .post-content {
+        font-size: 1.0625rem;
+        line-height: 1.85;
+        color: var(--text-primary);
+    }
+
+    .post-content p {
+        max-width: 100%;
+        margin-bottom: var(--space-lg);
+    }
+
+    .post-content h2 {
+        font-size: 1.5rem;
+        margin-top: var(--space-xl);
+        margin-bottom: var(--space-md);
+    }
+
+    .post-content h3 {
+        font-size: 1.25rem;
+        margin-top: var(--space-lg);
+        margin-bottom: var(--space-md);
+    }
+
+    .post-content a {
+        color: var(--accent-rose);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+    .post-content a:hover {
+        color: var(--accent-lavender);
+    }
+
+    .post-content code {
+        font-family: var(--font-mono);
+        font-size: 0.875em;
+        background-color: var(--bg-surface-hover);
+        padding: 0.15em 0.4em;
+        border-radius: var(--radius-sm);
+    }
+
+    .post-content pre {
+        background-color: var(--bg-surface);
+        border: 1px solid rgba(232,180,184,0.06);
+        border-radius: var(--radius-md);
+        padding: var(--space-lg);
+        overflow-x: auto;
+        margin: var(--space-lg) 0;
+    }
+
+    .post-content pre code {
+        background: none;
+        padding: 0;
+    }
+
+    .post-content blockquote {
+        border-left: 3px solid var(--accent-rose);
+        margin: var(--space-lg) 0;
+        padding: var(--space-sm) var(--space-lg);
+        color: var(--text-muted);
+        font-style: italic;
+    }
+
+    .post-content img {
+        border-radius: var(--radius-md);
+        margin: var(--space-lg) 0;
+    }
+
+    .post-content ul, .post-content ol {
+        padding-left: var(--space-lg);
+        margin-bottom: var(--space-lg);
+    }
+
+    .post-content li {
+        margin-bottom: var(--space-sm);
+    }
+</style>
