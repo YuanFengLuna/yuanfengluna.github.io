@@ -150,3 +150,35 @@ layout: home
     </div>
   </div>
 </section>
+
+<!-- Hidden Quiz Section — discoverable via terminal "brew coffee" command -->
+<section id="quiz" class="quiz-section section" style="background-color: var(--bg-deep);">
+  <div class="section-narrow">
+    <div class="section-header reveal">brew coffee</div>
+    <h2 class="reveal" style="color: var(--accent-gold);">Want a free coffee?</h2>
+    <div class="quiz-card reveal">
+      <div id="quiz-entrance">
+        <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: var(--space-md);">A small challenge with a warm reward — answer a quiz about me correctly and a coffee is on me.</p>
+        <button id="start-quiz-btn" class="btn">Take the Quiz</button>
+      </div>
+
+      <div id="quiz-container" style="display: none;">
+        <div id="question-container"></div>
+
+        <div id="quiz-summary" style="display: none;">
+          <p class="quiz-prompt">Your score: <span id="score">0</span>/<span id="total-questions">0</span></p>
+          <p class="score-message" id="score-message"></p>
+
+          <div id="coffee-reward" class="coffee-reward">
+            <p>Claim your free coffee:</p>
+            <div class="qr-container">
+              <img id="coffee-qr" src="" alt="QR code to claim coffee">
+            </div>
+          </div>
+
+          <button id="try-again-btn" class="btn" style="margin-top: var(--space-md);">Try Again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
