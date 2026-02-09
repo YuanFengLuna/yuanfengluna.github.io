@@ -111,3 +111,42 @@ layout: home
     </div>
   </div>
 </section>
+
+<!-- Faith Section -->
+<section id="faith" class="faith-section">
+  <div class="faith-inner">
+    <div class="section-header reveal" style="justify-content: center;">source .core</div>
+    <div class="reveal">
+      <p class="scripture">
+        "She is clothed with strength and dignity, and she laughs without fear of the future."
+      </p>
+      <p class="scripture-ref">Proverbs 31:25</p>
+    </div>
+    <p class="faith-reflection reveal">
+      Faith is my foundation, not a footnote. It shapes how I work — with integrity, purpose, and joy. In an industry that moves fast, I'm anchored in something that doesn't change.
+    </p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
+    <div class="section-header reveal">ping yuan</div>
+    <div class="reveal">
+      <div class="availability-badge">
+        <span class="availability-dot"></span>
+        status: available for freelance
+      </div>
+    </div>
+    <p class="reveal" style="font-size: 1.125rem; margin-bottom: var(--space-lg); max-width: 100%;">
+      I build agentic AI solutions and AI-powered products. Let's create something meaningful together.
+    </p>
+    <div class="reveal">
+      <a href="mailto:yuanfengluna@gmail.com" class="contact-email">mailto yuanfengluna@gmail.com</a>
+    </div>
+    <div class="contact-links reveal">
+      <a href="https://github.com/yuanfengluna" target="_blank" rel="noopener">github</a>
+      <a href="https://linkedin.com/in/yuanluna" target="_blank" rel="noopener">linkedin</a>
+    </div>
+  </div>
+</section>
