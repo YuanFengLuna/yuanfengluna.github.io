@@ -1,0 +1,100 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<section class="section" style="padding-top: calc(var(--space-3xl) + 4rem);">
+    <div class="section-inner">
+        <div class="section-header">tail -f thoughts.log</div>
+
+        {% if site.posts.size > 0 %}
+        <div class="post-list">
+            <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-lg);">
+                > ls -la posts/
+            </div>
+            {% for post in site.posts %}
+            <a href="{{ post.url | relative_url }}" class="post-item">
+                <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                <span class="post-title">{{ post.title }}</span>
+                {% if post.reading_time %}<span class="post-meta">{{ post.reading_time }}</span>{% endif %}
+            </a>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div style="text-align: center; padding: var(--space-xl) 0;">
+            <p class="text-mono text-muted" style="font-size: 1rem;">
+                > ls -la posts/<br>
+                total 0<br><br>
+                No posts yet. Check back soon.
+            </p>
+        </div>
+        {% endif %}
+
+        <div style="margin-top: var(--space-xl);">
+            <a href="{{ '/' | relative_url }}" class="btn">cd ~</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .post-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .post-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-lg);
+        padding: var(--space-md) var(--space-md);
+        border-radius: var(--radius-sm);
+        text-decoration: none;
+        transition: background-color var(--transition-fast);
+        color: var(--text-primary);
+    }
+
+    .post-item:hover {
+        background-color: var(--bg-surface-hover);
+        color: var(--text-primary);
+    }
+
+    .post-date {
+        font-family: var(--font-mono);
+        font-size: 0.8125rem;
+        color: var(--text-muted);
+        min-width: 10ch;
+        flex-shrink: 0;
+    }
+
+    .post-title {
+        font-size: 1rem;
+        color: var(--accent-rose);
+        transition: color var(--transition-fast);
+    }
+
+    .post-item:hover .post-title {
+        color: var(--accent-lavender);
+    }
+
+    .post-meta {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+        .post-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--space-xs);
+        }
+
+        .post-meta {
+            margin-left: 0;
+        }
+    }
+</style>
