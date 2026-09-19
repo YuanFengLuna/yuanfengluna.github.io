@@ -22,12 +22,6 @@ layout: home
         </a>
       </li>
       <li class="entry-menu-item">
-        <a href="#faith" class="entry-menu-link">
-          <span class="cmd">> source .core</span>
-          <span class="desc">what drives me</span>
-        </a>
-      </li>
-      <li class="entry-menu-item">
         <a href="/blog" class="entry-menu-link">
           <span class="cmd">> tail -f blog</span>
           <span class="desc">thoughts & notes</span>
@@ -55,10 +49,13 @@ layout: home
       </div>
       <div class="whoami-content reveal">
         <p class="bio-text">
-          A faithful daughter of God, a loving wife, a cat mom, an enthusiast of whole foods diet & glucose revolution, an amateur painter/doodler.
+          A faithful daughter of God, a loving wife, a cat mom, an amateur painter/doodler.
         </p>
         <p class="bio-text">
-          A data-driven product software engineer with 8+ years of industry experience — from FAANG companies handling billions of user data to seed-round startups building everything from the ground up.
+          A software engineer with 10+ years across Meta and early-stage startups. These days I lead agentic development at Linktree, building the guardrails, tests, and self-healing loops that make LLM agents reliable enough to run in production CI. Turns out "it worked on my prompt" is not a deployment strategy.
+        </p>
+        <p class="bio-text">
+          Before that, I was a tech lead and acting engineering manager at Meta, where I grew a platform infrastructure team from 0 to 7 engineers and shipped Instagram ad products to a global audience.
         </p>
         <p class="bio-text">
           From <span style="text-decoration: line-through; text-decoration-color: var(--accent-rose); opacity: 0.6;">Beijing, China</span> to Irvine, California. Whatever I do, I love what I put my hands on.
@@ -77,54 +74,57 @@ layout: home
     <div class="section-header reveal">cat skills.md</div>
     <div class="skills-grid">
       <div class="skill-card reveal">
-        <h3>Agentic AI Solutions</h3>
-        <p>Building autonomous AI systems that reason, plan, and execute complex workflows. From multi-agent architectures to production-grade agentic pipelines.</p>
+        <h3>AI &amp; Agentic Systems</h3>
+        <p>I build the scaffolding that keeps LLM agents from freelancing: guardrails written in code instead of pleaded in prompts, evals that check their work, and loops that spot a production bug, fix it, ship it, and roll it back if it goes sideways. At Linktree, one agent tests every pull request, and moving it to a code-based harness cut its cost 57% month-over-month.</p>
         <div class="tech-tags">
-          <span class="tech-tag">LangChain</span>
-          <span class="tech-tag">CrewAI</span>
-          <span class="tech-tag">Claude</span>
-          <span class="tech-tag">GPT</span>
-          <span class="tech-tag">RAG</span>
+          <span class="tech-tag">Agent Harnesses</span>
+          <span class="tech-tag">Evals</span>
+          <span class="tech-tag">Loop Engineering</span>
+          <span class="tech-tag">MCP</span>
+          <span class="tech-tag">Claude Code</span>
+          <span class="tech-tag">Devin</span>
+          <span class="tech-tag">Codex</span>
         </div>
       </div>
       <div class="skill-card reveal">
-        <h3>AI Application Development</h3>
-        <p>LLM-powered products from prototype to production. Full-stack development with AI integration, from chat interfaces to intelligent automation tools.</p>
+        <h3>Languages &amp; Frameworks</h3>
+        <p>Full-stack and product-minded. I like the whole stack, from a React front end to a GraphQL API to a SQL query that really should have had an index.</p>
         <div class="tech-tags">
-          <span class="tech-tag">Python</span>
           <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Hack</span>
+          <span class="tech-tag">SQL</span>
           <span class="tech-tag">React</span>
-          <span class="tech-tag">Next.js</span>
-          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">GraphQL</span>
         </div>
       </div>
       <div class="skill-card reveal">
-        <h3>Product Design & Engineering</h3>
-        <p>8+ years from FAANG to startup. User-centered product thinking meets rigorous engineering. Data-driven decisions, scalable architecture, beautiful interfaces.</p>
+        <h3>Infrastructure &amp; Reliability</h3>
+        <p>The person who gets paged, and would much rather fix the root cause so nobody has to be. I keep the edge, networking, and deploy pipeline humming, and one legacy database migration took hosting from $150k to $30k a year.</p>
         <div class="tech-tags">
-          <span class="tech-tag">System Design</span>
-          <span class="tech-tag">Data Pipelines</span>
-          <span class="tech-tag">Cloud</span>
+          <span class="tech-tag">Kubernetes</span>
+          <span class="tech-tag">AWS</span>
+          <span class="tech-tag">GCP</span>
+          <span class="tech-tag">Terraform</span>
+          <span class="tech-tag">Fastly</span>
           <span class="tech-tag">CI/CD</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">BigQuery</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Leadership</h3>
+        <p>Tech lead, acting manager, mentor. I grew a team from 0 to 7, owned hiring and roadmap, and was the sole critical on-call through the 2020 US election week. Coffee was involved.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Technical Leadership</span>
+          <span class="tech-tag">Team Building</span>
+          <span class="tech-tag">Roadmapping</span>
+          <span class="tech-tag">Mentoring</span>
+          <span class="tech-tag">Incident Management</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Faith Section -->
-<section id="faith" class="faith-section">
-  <div class="faith-inner">
-    <div class="section-header reveal" style="justify-content: center;">source .core</div>
-    <div class="reveal">
-      <p class="scripture">
-        "She is clothed with strength and dignity, and she laughs without fear of the future."
-      </p>
-      <p class="scripture-ref">Proverbs 31:25</p>
-    </div>
-    <p class="faith-reflection reveal">
-      Faith is my foundation, not a footnote. It shapes how I work — with integrity, purpose, and joy. In an industry that moves fast, I'm anchored in something that doesn't change.
-    </p>
   </div>
 </section>
 
@@ -146,7 +146,7 @@ layout: home
     </div>
     <div class="contact-links reveal">
       <a href="https://github.com/yuanfengluna" target="_blank" rel="noopener">github</a>
-      <a href="https://linkedin.com/in/yuanluna" target="_blank" rel="noopener">linkedin</a>
+      <a href="https://www.linkedin.com/in/yuanfengluna/" target="_blank" rel="noopener">linkedin</a>
     </div>
   </div>
 </section>

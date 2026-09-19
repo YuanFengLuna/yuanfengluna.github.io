@@ -137,7 +137,6 @@
             writeLine('  whoami          - about me', 'info');
             writeLine('  ls              - list sections', 'info');
             writeLine('  cat skills.md   - my skills', 'info');
-            writeLine('  source .core    - what drives me', 'info');
             writeLine('  ping yuan       - contact info', 'info');
             writeLine('  clear           - clear terminal', 'info');
             writeLine('  exit            - close terminal', 'info');
@@ -149,14 +148,13 @@
             writeLine('Yuan Luna', 'lavender');
             writeLine('Software engineer, AI builder, cat mom.', 'info');
             writeLine('From Beijing to Irvine, California.', 'info');
-            writeLine('8+ years: FAANG -> startup -> agentic AI.', 'info');
+            writeLine('10+ years: Meta -> startups -> agentic AI.', 'info');
             writeLine('INTJ. Morning person. Americano drinker.', 'muted');
         },
 
         ls: function () {
             writeLine('drwxr-xr-x  intro/      -> #intro', 'info');
             writeLine('drwxr-xr-x  skills/     -> #work', 'info');
-            writeLine('drwxr-xr-x  faith/      -> #faith', 'info');
             writeLine('drwxr-xr-x  blog/       -> /blog', 'info');
             writeLine('drwxr-xr-x  contact/    -> #contact', 'info');
         },
@@ -164,29 +162,24 @@
         'cat skills.md': function () {
             writeLine('# Skills', 'lavender');
             writeLine('', 'info');
-            writeLine('## Agentic AI Solutions', 'info');
-            writeLine('LangChain, CrewAI, Claude, GPT, RAG', 'muted');
+            writeLine('## AI & Agentic Systems', 'info');
+            writeLine('Agent harnesses, evals, loop engineering, MCP, Claude Code', 'muted');
             writeLine('', 'info');
-            writeLine('## AI Application Development', 'info');
-            writeLine('Python, TypeScript, React, Next.js, FastAPI', 'muted');
+            writeLine('## Languages & Frameworks', 'info');
+            writeLine('TypeScript, JavaScript, Python, Hack, SQL, React, GraphQL', 'muted');
             writeLine('', 'info');
-            writeLine('## Product Design & Engineering', 'info');
-            writeLine('System Design, Data Pipelines, Cloud, CI/CD', 'muted');
-        },
-
-        'source .core': function () {
+            writeLine('## Infrastructure & Reliability', 'info');
+            writeLine('Kubernetes, AWS, GCP, Terraform, Fastly, CI/CD', 'muted');
             writeLine('', 'info');
-            writeLine('"She is clothed with strength and dignity,', 'gold');
-            writeLine(' and she laughs without fear of the future."', 'gold');
-            writeLine('                        — Proverbs 31:25', 'muted');
-            writeLine('', 'info');
+            writeLine('## Leadership', 'info');
+            writeLine('Tech lead, team building (0 to 7), mentoring', 'muted');
         },
 
         'ping yuan': function () {
             writeLine('PING yuan.luna (available)', 'info');
             writeLine('64 bytes: email=yuanfengluna@gmail.com ttl=64', 'info');
             writeLine('64 bytes: github=github.com/yuanfengluna ttl=64', 'info');
-            writeLine('64 bytes: linkedin=linkedin.com/in/yuanluna ttl=64', 'info');
+            writeLine('64 bytes: linkedin=linkedin.com/in/yuanfengluna ttl=64', 'info');
             writeLine('', 'info');
             writeLine('--- yuan.luna ping statistics ---', 'muted');
             writeLine('status: available for freelance work', 'lavender');

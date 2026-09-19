@@ -31,7 +31,7 @@ Note: Changes to `_config.yml` require restarting the server.
 - **`_layouts/post.html`** — Extends `default.html`. Blog post layout with terminal-styled metadata
 
 ### Pages
-- **`index.markdown`** — Homepage with 6 sections: Entry (particle grid + terminal menu), Whoami (portrait + bio), Skills (3-card grid), Faith (scripture + reflection), Contact (availability badge + email), Quiz (hidden easter egg)
+- **`index.markdown`** — Homepage with 5 sections: Entry (particle grid + terminal menu), Whoami (portrait + bio), Skills (4-card grid), Contact (availability badge + email), Quiz (hidden easter egg)
 - **`blog.html`** — Blog index with terminal-styled post list
 - **`404.html`** — Terminal-themed 404 page
 
@@ -41,7 +41,7 @@ Note: Changes to `_config.yml` require restarting the server.
 - **`assets/js/particles.js`** — Animated particle grid on canvas (respects prefers-reduced-motion)
 - **`assets/js/scroll.js`** — Intersection Observer scroll reveal + typing animation for entry tagline + smooth anchor scrolling
 - **`assets/js/quiz.js`** — Coffee reward quiz logic (extracted from inline JS). Perfect score generates QR code
-- **`assets/js/terminal.js`** — Interactive terminal overlay. Toggle via `_` button or backtick key. Commands: help, whoami, ls, cat skills.md, source .core, ping yuan, clear, exit, brew coffee (secret)
+- **`assets/js/terminal.js`** — Interactive terminal overlay. Toggle via `_` button or backtick key. Commands: help, whoami, ls, cat skills.md, ping yuan, clear, exit, brew coffee (secret)
 
 ## Key Design Patterns
 
