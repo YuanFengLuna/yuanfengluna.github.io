@@ -72,7 +72,7 @@ layout: home
     <div class="skills-grid">
       <div class="skill-card reveal">
         <h3>AI &amp; Agentic Systems</h3>
-        <p>I build the scaffolding that keeps LLM agents from freelancing: guardrails written in code instead of pleaded in prompts, evals that check their work, and loops that spot a production bug, fix it, ship it, and roll it back if it goes sideways. At Linktree, one agent tests every pull request, and moving it to a code-based harness cut its cost 57% month-over-month.</p>
+        <p>I build the systems that make AI agents dependable enough to trust with real work: rules enforced in code instead of politely requested in prompts, tests that check whether an agent is actually doing its job, and loops that catch a production bug, fix it, ship the fix, and undo it if something goes wrong. At Linktree, one of my agents tests every pull request, and once its rules moved from prompts into code, its cost dropped 57% month-over-month.</p>
         <div class="tech-tags">
           <span class="tech-tag">Agent Harnesses</span>
           <span class="tech-tag">Evals</span>
@@ -85,7 +85,7 @@ layout: home
       </div>
       <div class="skill-card reveal">
         <h3>Languages &amp; Frameworks</h3>
-        <p>Full-stack and product-minded. I like the whole stack, from a React front end to a GraphQL API to a SQL query that really should have had an index.</p>
+        <p>Product-minded and comfortable across the stack, from a React front end to a GraphQL API to a SQL query that really should have had an index.</p>
         <div class="tech-tags">
           <span class="tech-tag">TypeScript</span>
           <span class="tech-tag">JavaScript</span>
@@ -98,7 +98,7 @@ layout: home
       </div>
       <div class="skill-card reveal">
         <h3>Infrastructure &amp; Reliability</h3>
-        <p>The person who gets paged, and would much rather fix the root cause so nobody has to be. I keep the edge, networking, and deploy pipeline humming, and one legacy database migration took hosting from $150k to $30k a year.</p>
+        <p>I'm the one who gets paged, and I'd much rather fix the root cause so nobody else has to be. I own reliability across edge, networking, and CI/CD, and a legacy database migration I led cut hosting costs from $150k to $30k a year.</p>
         <div class="tech-tags">
           <span class="tech-tag">Kubernetes</span>
           <span class="tech-tag">AWS</span>
@@ -112,7 +112,7 @@ layout: home
       </div>
       <div class="skill-card reveal">
         <h3>Leadership</h3>
-        <p>Tech lead, acting manager, mentor. I grew a team from 0 to 7, owned hiring and roadmap, and was the sole critical on-call through the 2020 US election week. Coffee was involved.</p>
+        <p>Tech lead, acting manager, mentor. I grew an infrastructure team from zero to seven engineers, owned its hiring and roadmap, and was the only person on call for critical issues through the 2020 US election week. It was a long week, and the Americanos did their part.</p>
         <div class="tech-tags">
           <span class="tech-tag">Technical Leadership</span>
           <span class="tech-tag">Team Building</span>
