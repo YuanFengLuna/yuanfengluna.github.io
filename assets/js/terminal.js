@@ -168,11 +168,8 @@
             writeLine('## Languages & Frameworks', 'info');
             writeLine('TypeScript, JavaScript, Python, Hack, SQL, React, GraphQL', 'muted');
             writeLine('', 'info');
-            writeLine('## Infrastructure & Reliability', 'info');
-            writeLine('Kubernetes, AWS, GCP, Terraform, Fastly, CI/CD', 'muted');
-            writeLine('', 'info');
-            writeLine('## Leadership', 'info');
-            writeLine('Tech lead, team building (0 to 7), mentoring', 'muted');
+            writeLine('## Full-Stack, Pipeline to Pixels', 'info');
+            writeLine('CI/CD, DevOps, Kubernetes, AWS, GCP, Fastly, A/B testing', 'muted');
         },
 
         'ping yuan': function () {

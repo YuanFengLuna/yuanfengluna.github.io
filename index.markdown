@@ -72,7 +72,7 @@ layout: home
     <div class="skills-grid">
       <div class="skill-card reveal">
         <h3>AI &amp; Agentic Systems</h3>
-        <p>I build the systems that make AI agents dependable enough for real work: rules enforced in code rather than politely requested in prompts, tests that measure whether an agent is actually doing its job, and a second agent that reviews the first one's work and triages what went wrong. At Linktree, an agent I built tests every pull request, and moving its rules from prompts into code made it cheaper and far more reliable. Now I'm building a self-healing system that catches production issues, has a coding agent fix them, and decides whether each fix is safe to ship. Its most important feature is knowing when not to trust itself.</p>
+        <p>I build the systems that make AI agents dependable enough for real work: rules enforced in code rather than politely requested in prompts, evals that tell whether an agent is doing its job or just sounding confident, and a second agent that audits the first. At Linktree, an agent I built tests every pull request, and moving its rules from prompts into code made it cheaper and far more reliable. Now I'm building a self-healing system that catches production issues, has a coding agent fix them, and decides whether each fix is safe to ship. Its best feature is knowing when not to trust itself.</p>
         <div class="tech-tags">
           <span class="tech-tag">Agent Harnesses</span>
           <span class="tech-tag">Evals</span>
@@ -85,7 +85,7 @@ layout: home
       </div>
       <div class="skill-card reveal">
         <h3>Languages &amp; Frameworks</h3>
-        <p>Product-minded and comfortable across the stack, from a React front end to a GraphQL API to a SQL query that really should have had an index.</p>
+        <p>I build across the whole stack, from a React front end to a GraphQL API to a SQL query that really should have had an index, and I obsess over one thing: how it all feels to the person on the other end.</p>
         <div class="tech-tags">
           <span class="tech-tag">TypeScript</span>
           <span class="tech-tag">JavaScript</span>
@@ -97,28 +97,18 @@ layout: home
         </div>
       </div>
       <div class="skill-card reveal">
-        <h3>Infrastructure &amp; Reliability</h3>
-        <p>I'm the one who gets paged, and I'd much rather fix the root cause so nobody else has to be. I own reliability across edge, networking, and CI/CD, and I led a legacy database migration that cut hosting costs to a fraction of what they were.</p>
+        <h3>Full-Stack, Pipeline to Pixels</h3>
+        <p>End to end is where I do my best work. I've shipped everything from the CI/CD pipeline and DevOps underneath, through cloud and edge infrastructure, up to the front-end experience and the A/B test that tells you whether it worked. When something breaks, I follow it to wherever it actually lives, and I'd much rather fix the root cause than keep being the person who gets paged.</p>
         <div class="tech-tags">
+          <span class="tech-tag">CI/CD</span>
+          <span class="tech-tag">DevOps</span>
           <span class="tech-tag">Kubernetes</span>
           <span class="tech-tag">AWS</span>
           <span class="tech-tag">GCP</span>
           <span class="tech-tag">Terraform</span>
           <span class="tech-tag">Fastly</span>
-          <span class="tech-tag">CI/CD</span>
-          <span class="tech-tag">MySQL</span>
           <span class="tech-tag">BigQuery</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <h3>Leadership</h3>
-        <p>Tech lead, acting manager, mentor. I built an infrastructure team from the ground up, owned its hiring and roadmap, and coached junior engineers through launches of their own. When it mattered most, I was the only person on call for critical issues through the 2020 US election week.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Technical Leadership</span>
-          <span class="tech-tag">Team Building</span>
-          <span class="tech-tag">Roadmapping</span>
-          <span class="tech-tag">Mentoring</span>
-          <span class="tech-tag">Incident Management</span>
+          <span class="tech-tag">A/B Testing</span>
         </div>
       </div>
     </div>
