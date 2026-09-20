@@ -49,7 +49,7 @@ layout: home
       </div>
       <div class="whoami-content reveal">
         <p class="bio-text">
-          A faithful daughter of God, a loving wife, a cat mom, an amateur painter/doodler.
+          A faithful daughter of God, a loving wife, an amateur painter/doodler.
         </p>
         <p class="bio-text">
           I love things that look effortless because someone cared about the details: software that never goes down, a painting that feels finished, a well-made Americano to start the morning. These days I teach AI agents to behave themselves. Mostly.
@@ -124,13 +124,12 @@ layout: home
       </div>
     </div>
     <p class="reveal" style="font-size: 1.125rem; margin-bottom: var(--space-lg); max-width: 100%;">
-      I build agentic AI solutions and AI-powered products. Let's create something meaningful together.
+      Building something that needs AI to actually hold up? Tell me about it.
     </p>
     <div class="reveal">
       <a href="mailto:yuanfengluna@gmail.com" class="contact-email">mailto yuanfengluna@gmail.com</a>
     </div>
     <div class="contact-links reveal">
-      <a href="https://github.com/yuanfengluna" target="_blank" rel="noopener">github</a>
       <a href="https://www.linkedin.com/in/yuanfengluna/" target="_blank" rel="noopener">linkedin</a>
     </div>
   </div>

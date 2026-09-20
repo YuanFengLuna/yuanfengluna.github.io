@@ -146,9 +146,9 @@
 
         whoami: function () {
             writeLine('Yuan Luna', 'lavender');
-            writeLine('Software engineer, AI builder, cat mom.', 'info');
+            writeLine('Software engineer, amateur painter.', 'info');
             writeLine('From Beijing to Irvine, California.', 'info');
-            writeLine('10+ years: Meta -> startups -> agentic AI.', 'info');
+            writeLine('10+ years: Meta -> startups -> AI systems.', 'info');
             writeLine('INTJ. Morning person. Americano drinker.', 'muted');
         },
 
@@ -175,7 +175,6 @@
         'ping yuan': function () {
             writeLine('PING yuan.luna (available)', 'info');
             writeLine('64 bytes: email=yuanfengluna@gmail.com ttl=64', 'info');
-            writeLine('64 bytes: github=github.com/yuanfengluna ttl=64', 'info');
             writeLine('64 bytes: linkedin=linkedin.com/in/yuanfengluna ttl=64', 'info');
             writeLine('', 'info');
             writeLine('--- yuan.luna ping statistics ---', 'muted');
