@@ -52,10 +52,10 @@ layout: home
           A faithful daughter of God, a loving wife, a cat mom, an amateur painter/doodler.
         </p>
         <p class="bio-text">
-          A software engineer with 10+ years across Meta and early-stage startups. These days I lead agentic development at Linktree, building the guardrails, tests, and self-healing loops that make LLM agents reliable enough to run in production CI. Turns out "it worked on my prompt" is not a deployment strategy.
+          I like building things that look effortless from the outside: software that quietly holds together, a painting that finally comes together, a morning that starts with a well-made Americano. These days I teach AI agents to behave themselves. Mostly.
         </p>
         <p class="bio-text">
-          Before that, I was a tech lead and acting engineering manager at Meta, where I grew a platform infrastructure team from 0 to 7 engineers and shipped Instagram ad products to a global audience.
+          A decade in tech, from Meta to scrappy startups, taught me that the good stuff is elegant, a little stubborn, and made with care.
         </p>
         <p class="bio-text">
           From <span style="text-decoration: line-through; text-decoration-color: var(--accent-rose); opacity: 0.6;">Beijing, China</span> to Irvine, California. Whatever I do, I love what I put my hands on.
