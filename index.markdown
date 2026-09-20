@@ -72,7 +72,7 @@ layout: home
     <div class="skills-grid">
       <div class="skill-card reveal">
         <h3>AI &amp; Agentic Systems</h3>
-        <p>I build the systems that make AI agents dependable enough to trust with real work: rules enforced in code instead of politely requested in prompts, tests that check whether an agent is actually doing its job, and loops that catch a production bug, fix it, ship the fix, and undo it if something goes wrong. At Linktree, one of my agents tests every pull request, and once its rules moved from prompts into code, its cost dropped 57% month-over-month.</p>
+        <p>I build the systems that make AI agents dependable enough for real work: rules enforced in code rather than politely requested in prompts, tests that measure whether an agent is actually doing its job, and a second agent that reviews the first one's work and triages what went wrong. At Linktree, an agent I built tests every pull request, and moving its rules from prompts into code made it cheaper and far more reliable. Now I'm building a self-healing system that catches production issues, has a coding agent fix them, and decides whether each fix is safe to ship. Its most important feature is knowing when not to trust itself.</p>
         <div class="tech-tags">
           <span class="tech-tag">Agent Harnesses</span>
           <span class="tech-tag">Evals</span>
@@ -98,7 +98,7 @@ layout: home
       </div>
       <div class="skill-card reveal">
         <h3>Infrastructure &amp; Reliability</h3>
-        <p>I'm the one who gets paged, and I'd much rather fix the root cause so nobody else has to be. I own reliability across edge, networking, and CI/CD, and a legacy database migration I led cut hosting costs from $150k to $30k a year.</p>
+        <p>I'm the one who gets paged, and I'd much rather fix the root cause so nobody else has to be. I own reliability across edge, networking, and CI/CD, and I led a legacy database migration that cut hosting costs to a fraction of what they were.</p>
         <div class="tech-tags">
           <span class="tech-tag">Kubernetes</span>
           <span class="tech-tag">AWS</span>
@@ -112,7 +112,7 @@ layout: home
       </div>
       <div class="skill-card reveal">
         <h3>Leadership</h3>
-        <p>Tech lead, acting manager, mentor. I grew an infrastructure team from zero to seven engineers, owned its hiring and roadmap, and was the only person on call for critical issues through the 2020 US election week. It was a long week, and the Americanos did their part.</p>
+        <p>Tech lead, acting manager, mentor. I built an infrastructure team from the ground up, owned its hiring and roadmap, and coached junior engineers through launches of their own. When it mattered most, I was the only person on call for critical issues through the 2020 US election week.</p>
         <div class="tech-tags">
           <span class="tech-tag">Technical Leadership</span>
           <span class="tech-tag">Team Building</span>
