@@ -52,16 +52,13 @@ layout: home
           A faithful daughter of God, a loving wife, a cat mom, an amateur painter/doodler.
         </p>
         <p class="bio-text">
-          I like building things that look effortless from the outside: software that quietly holds together, a painting that finally comes together, a morning that starts with a well-made Americano. These days I teach AI agents to behave themselves. Mostly.
+          I love things that look effortless because someone cared about the details: software that never goes down, a painting that feels finished, a well-made Americano to start the morning. These days I teach AI agents to behave themselves. Mostly.
         </p>
         <p class="bio-text">
           A decade in tech, from Meta to scrappy startups, taught me that the good stuff is elegant, a little stubborn, and made with care.
         </p>
         <p class="bio-text">
-          From <span style="text-decoration: line-through; text-decoration-color: var(--accent-rose); opacity: 0.6;">Beijing, China</span> to Irvine, California. Whatever I do, I love what I put my hands on.
-        </p>
-        <p class="bio-text" style="color: var(--text-muted); font-size: 0.9375rem;">
-          After all, just a human being, that is so insignificant in this world, yet so unique in His eyes.
+          Originally from Beijing, now happily settled in Irvine, California. Wherever life takes me, my foundation will always be in God.
         </p>
       </div>
     </div>
