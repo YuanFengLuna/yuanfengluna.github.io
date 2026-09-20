@@ -163,13 +163,13 @@
             writeLine('# Skills', 'lavender');
             writeLine('', 'info');
             writeLine('## AI & Agentic Systems', 'info');
-            writeLine('Agent harnesses, evals, loop engineering, MCP, Claude Code', 'muted');
+            writeLine('Agent harnesses, evals, loop engineering, tool calling, MCP', 'muted');
             writeLine('', 'info');
             writeLine('## Languages & Frameworks', 'info');
             writeLine('TypeScript, JavaScript, Python, Hack, SQL, React, GraphQL', 'muted');
             writeLine('', 'info');
-            writeLine('## Full-Stack, Pipeline to Pixels', 'info');
-            writeLine('CI/CD, DevOps, Kubernetes, AWS, GCP, Fastly, A/B testing', 'muted');
+            writeLine('## Full-Stack, Cloud to Pixels', 'info');
+            writeLine('Kubernetes, AWS, GCP, Fastly, CI/CD, React, A/B testing', 'muted');
         },
 
         'ping yuan': function () {

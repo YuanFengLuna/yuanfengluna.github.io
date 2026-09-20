@@ -72,15 +72,13 @@ layout: home
     <div class="skills-grid">
       <div class="skill-card reveal">
         <h3>AI &amp; Agentic Systems</h3>
-        <p>I build the systems that make AI agents dependable enough for real work: rules enforced in code rather than politely requested in prompts, evals that tell whether an agent is doing its job or just sounding confident, and a second agent that audits the first. At Linktree, an agent I built tests every pull request, and moving its rules from prompts into code made it cheaper and far more reliable. Now I'm building a self-healing system that catches production issues, has a coding agent fix them, and decides whether each fix is safe to ship. Its best feature is knowing when not to trust itself.</p>
+        <p>I build the scaffolding that makes AI agents dependable, with rules enforced in code instead of politely requested in prompts. I've built an agent that tests every pull request, grown it into a platform where anyone can write end-to-end tests in plain English, and designed a loop that fixes production issues and rolls back any fix that doesn't hold.</p>
         <div class="tech-tags">
           <span class="tech-tag">Agent Harnesses</span>
           <span class="tech-tag">Evals</span>
           <span class="tech-tag">Loop Engineering</span>
+          <span class="tech-tag">Tool Calling</span>
           <span class="tech-tag">MCP</span>
-          <span class="tech-tag">Claude Code</span>
-          <span class="tech-tag">Devin</span>
-          <span class="tech-tag">Codex</span>
         </div>
       </div>
       <div class="skill-card reveal">
@@ -97,17 +95,17 @@ layout: home
         </div>
       </div>
       <div class="skill-card reveal">
-        <h3>Full-Stack, Pipeline to Pixels</h3>
-        <p>End to end is where I do my best work. I've shipped everything from the CI/CD pipeline and DevOps underneath, through cloud and edge infrastructure, up to the front-end experience and the A/B test that tells you whether it worked. When something breaks, I follow it to wherever it actually lives, and I'd much rather fix the root cause than keep being the person who gets paged.</p>
+        <h3>Full-Stack, Cloud to Pixels</h3>
+        <p>I've lived on every floor of the stack: cloud infrastructure and the edge at the bottom (Kubernetes, Terraform, Fastly), a CI/CD pipeline in the middle moving every change from commit to production, and a React front end at the top with A/B tests to settle whether it worked. Bugs don't respect layers, so I trace them down like a stack trace. It's usually the network. Occasionally it's my own commit.</p>
         <div class="tech-tags">
-          <span class="tech-tag">CI/CD</span>
-          <span class="tech-tag">DevOps</span>
           <span class="tech-tag">Kubernetes</span>
+          <span class="tech-tag">Terraform</span>
           <span class="tech-tag">AWS</span>
           <span class="tech-tag">GCP</span>
-          <span class="tech-tag">Terraform</span>
           <span class="tech-tag">Fastly</span>
-          <span class="tech-tag">BigQuery</span>
+          <span class="tech-tag">CI/CD</span>
+          <span class="tech-tag">DevOps</span>
+          <span class="tech-tag">React</span>
           <span class="tech-tag">A/B Testing</span>
         </div>
       </div>
