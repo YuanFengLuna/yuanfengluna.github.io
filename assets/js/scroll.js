@@ -34,7 +34,7 @@
     // Typing animation for entry tagline
     var tagline = document.getElementById('typed-tagline');
     if (tagline) {
-        var text = 'Building agentic AI that works for humans.';
+        var text = 'Building stuff, agentic these days.';
         var charIndex = 0;
 
         function typeChar() {
