@@ -48,6 +48,7 @@
     var score = 0;
 
     function startQuiz() {
+        if (window.trackEvent) window.trackEvent('quiz/start', 'Started quiz');
         document.getElementById('quiz-entrance').style.display = 'none';
         document.getElementById('quiz-container').style.display = 'block';
         document.getElementById('total-questions').textContent = quizQuestions.length;
@@ -118,6 +119,7 @@
 
                 var totalQuestions = quizQuestions.length;
                 var perfectScore = score === totalQuestions;
+                if (window.trackEvent) window.trackEvent(perfectScore ? 'quiz/perfect' : 'quiz/finish', perfectScore ? 'Quiz: perfect score' : 'Quiz: finished');
                 var message = document.getElementById('score-message');
 
                 if (perfectScore) {

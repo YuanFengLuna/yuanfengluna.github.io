@@ -41,6 +41,7 @@ Note: Changes to `_config.yml` require restarting the server.
 - **`assets/js/particles.js`** — Animated particle grid on canvas (respects prefers-reduced-motion)
 - **`assets/js/scroll.js`** — Intersection Observer scroll reveal + typing animation for entry tagline + smooth anchor scrolling
 - **`assets/js/quiz.js`** — Coffee reward quiz logic (extracted from inline JS). Perfect score generates QR code
+- **`assets/js/analytics.js`** — GoatCounter event wrapper (`window.trackEvent`), a silent no-op when GoatCounter isn't loaded. Tracks contact clicks; terminal and quiz call it for their events. The GoatCounter script only loads when `goatcounter:` is set in `_config.yml` (empty = analytics off)
 - **`assets/js/terminal.js`** — Interactive terminal overlay. Toggle via `_` button or backtick key. Commands: help, whoami, ls, cat skills.md, ping yuan, clear, exit, brew coffee (secret)
 
 ## Key Design Patterns

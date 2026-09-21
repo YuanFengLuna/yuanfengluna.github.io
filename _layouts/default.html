@@ -45,6 +45,10 @@
     </footer>
 
     <!-- Scripts -->
+    {% if site.goatcounter != empty %}
+    <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+    {% endif %}
+    <script src="{{ '/assets/js/analytics.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/cursor.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/terminal.js' | relative_url }}"></script>
 

@@ -4,6 +4,10 @@ email: yuanfengluna@gmail.com
 description: >-
   Agentic AI Solutions & Product Engineering
 baseurl: ""
+
+# GoatCounter site code (the part before .goatcounter.com).
+# Leave empty to disable analytics entirely.
+goatcounter: "yuanluna"
 url: "https://yuanluna.com"
 
 # Build settings

@@ -212,8 +212,10 @@
         if (!trimmed) return;
 
         if (commands[trimmed]) {
+            if (window.trackEvent) window.trackEvent('terminal/' + trimmed.replace(/\s+/g, '-'), 'Terminal: ' + trimmed);
             commands[trimmed]();
         } else {
+            if (window.trackEvent) window.trackEvent('terminal/unknown', 'Terminal: unknown command');
             writeLine('command not found: ' + trimmed, 'muted');
             writeLine('Type "help" for available commands.', 'muted');
         }
@@ -222,6 +224,7 @@
     }
 
     function openTerminal() {
+        if (!isOpen && window.trackEvent) window.trackEvent('terminal/open', 'Opened terminal');
         isOpen = true;
         overlay.classList.add('open');
         if (output.children.length === 0) {
