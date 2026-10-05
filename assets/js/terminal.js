@@ -178,7 +178,7 @@
             writeLine('64 bytes: linkedin=linkedin.com/in/yuanfengluna ttl=64', 'info');
             writeLine('', 'info');
             writeLine('--- yuan.luna ping statistics ---', 'muted');
-            writeLine('status: available for freelance work', 'lavender');
+            writeLine('status: always happy to talk shop', 'lavender');
         },
 
         clear: function () {

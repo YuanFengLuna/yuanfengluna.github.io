@@ -96,7 +96,7 @@ layout: home
       </div>
       <div class="skill-card reveal">
         <h3>Full-Stack, Cloud to Pixels</h3>
-        <p>I've lived on every floor of the stack: cloud infrastructure and the edge at the bottom (Kubernetes, Terraform, Fastly), a CI/CD pipeline in the middle moving every change from commit to production, and a React front end at the top with A/B tests to settle whether it worked. Bugs don't respect layers, so I trace them down like a stack trace. It's usually the network. Occasionally it's my own commit.</p>
+        <p>I've lived on every floor of the stack: cloud infrastructure and the edge at the bottom (Kubernetes, Terraform, Fastly), a CI/CD pipeline in the middle moving every change from commit to production, and a React front end at the top with A/B tests to settle whether it worked. Knowing the whole path means I can follow a problem from a user's click down to the infrastructure underneath, instead of stopping at the edge of my piece.</p>
         <div class="tech-tags">
           <span class="tech-tag">Kubernetes</span>
           <span class="tech-tag">Terraform</span>
@@ -120,11 +120,11 @@ layout: home
     <div class="reveal">
       <div class="availability-badge">
         <span class="availability-dot"></span>
-        status: available for freelance
+        status: always happy to talk shop
       </div>
     </div>
     <p class="reveal" style="font-size: 1.125rem; margin-bottom: var(--space-lg); max-width: 100%;">
-      Building something that needs AI to actually hold up? Tell me about it.
+      Running a small business and wondering how AI could help you scale? I help small teams figure out where AI actually pays off, then build it so it holds up as you grow. Tell me about it.
     </p>
     <div class="reveal">
       <a href="mailto:yuanfengluna@gmail.com" class="contact-email">mailto yuanfengluna@gmail.com</a>
